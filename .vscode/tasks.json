@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "java",
+			"mainClass": "com.myapp.root.RootApplication",
+			"targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+			"elements": [
+				"${compileOutput:ROOT}",
+				"${dependencies:ROOT}",
+				"${compileOutput:Tests}",
+				"${dependencies:Tests}"
+			],
+			"problemMatcher": [],
+			"label": "java: exportjar:java-starter",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
