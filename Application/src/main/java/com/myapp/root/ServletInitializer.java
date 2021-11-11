@@ -2,6 +2,8 @@ package com.myapp.root;
 
 import java.util.Arrays;
 
+import com.myapp.repository.StudentDAO;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -30,4 +32,8 @@ public class ServletInitializer extends SpringBootServletInitializer {
         };
     }
 
+    @Bean
+    public StudentDAO StudentDAO(ApplicationContext ctx) {
+        return new StudentDAO();
+    }
 }
