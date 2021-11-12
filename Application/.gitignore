@@ -5,6 +5,8 @@ build/
 !**/src/main/**
 !**/src/test/**
 
+Application/bin
+
 ### STS ###
 .apt_generated
 .classpath
@@ -27,6 +29,7 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
+
 
 ### VS Code ###
 .vscode/

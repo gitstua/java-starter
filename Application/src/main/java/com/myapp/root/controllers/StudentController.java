@@ -18,7 +18,7 @@ import com.myapp.repository.StudentDAO;
 
 
 @RestController
-@RequestMapping(path = "/students")
+@RequestMapping(path = "/")
 public class StudentController
 {
     @Autowired
