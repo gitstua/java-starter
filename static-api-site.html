@@ -7,12 +7,17 @@
     <title>Sample API calling App</title>
 
     <script>
-        const url = 'https://java-starter.azurewebsites.net/'
+        const url = 'https://appinsights-mobile-apim.azure-api.net/?Subscription-Key=cc8512138e0a4287aa42c59e19010b2b'
+
 
         function onButtonClick(){
             var txt = document.getElementById("txtResults");
 
-            fetch (url)
+            fetch(url, {
+                method : "GET",
+                mode: 'no-cors',
+                headers: {}
+            })
             .then(x => x.text())
             .then(y => txt.innerHTML = y);
             // txt.innerText = 'example';

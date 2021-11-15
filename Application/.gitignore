@@ -5,7 +5,7 @@ build/
 !**/src/main/**
 !**/src/test/**
 
-Application/bin
+Application/bin/**
 
 ### STS ###
 .apt_generated
