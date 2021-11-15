@@ -25,7 +25,7 @@ public class StudentController
     private StudentDAO studentDAO;
     
     //Http Get method to get the student list in JSON format
-    @GetMapping(path="/", produces = "application/json")
+    @GetMapping(path="/", produces = "application/json", headers = "Access-Control-Allow-Origin:*")
     public StudentPOJO getStudentList()
     {
         return studentDAO.getAllStudents();

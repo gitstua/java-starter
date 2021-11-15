@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample API calling App</title>
+
+    <script>
+        const url = 'https://java-starter.azurewebsites.net/'
+
+        function onButtonClick(){
+            var txt = document.getElementById("txtResults");
+
+            fetch (url)
+            .then(x => x.text())
+            .then(y => txt.innerHTML = y);
+            // txt.innerText = 'example';
+        }
+
+    </script>
+</head>
+<body>
+<form action="submit" method="post">
+    <button type="submit" onclick="onButtonClick();return false;">Test</button>
+    <div id='txtResults'></div>
+</form>
+
+    
+</body>
+</html>
