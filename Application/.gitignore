@@ -6,6 +6,7 @@ build/
 !**/src/test/**
 
 Application/bin/**
+*.jar
 
 ### STS ###
 .apt_generated
