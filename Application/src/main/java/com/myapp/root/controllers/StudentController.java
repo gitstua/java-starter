@@ -15,8 +15,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.myapp.models.StudentPOJO;
 import com.myapp.repository.StudentDAO;
 
-
-
 @RestController
 @RequestMapping(path = "/")
 public class StudentController
@@ -24,8 +22,8 @@ public class StudentController
     @Autowired
     private StudentDAO studentDAO;
     
-    //Http Get method to get the student list in JSON format
-    @GetMapping(path="/", produces = "application/json", headers = "Access-Control-Allow-Origin:*")
+    //Http Get method to get the student list in JSON format , headers = "Access-Control-Allow-Origin:*"
+    @GetMapping(path="/", produces = "application/json") 
     public StudentPOJO getStudentList()
     {
         return studentDAO.getAllStudents();
